@@ -10,6 +10,7 @@ def listCategory(request):
 
     #return  HttpResponse("hello",all_cat)
 
-def getCategory(requet,cat_id):
-    
+def getCategory(request,cat_id):
+    data=Category.objects.get(id=cat_id)
+    return render(request, 'show.html', {'one_cat': data})
 
