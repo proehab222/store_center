@@ -17,6 +17,8 @@
     <th>Category name</th>
     <th>Category Description</th>
     <th>View</th>
+    <th>Delete</th>
+    <th>Update</th>
 </tr>
 
 {% for cat in categories %}
@@ -28,6 +30,8 @@
 
        <td>  {{  cat.cat_desc   }}</td>
         <td> <a href="{{cat.id}}">View Cat</a> </td>
+        <td> <a href="{{cat.id}}/delete">Delete</a> </td>
+         <td> <a href="{{cat.id}}">Update</a> </td>
     </tr>
 
     {% endfor %}

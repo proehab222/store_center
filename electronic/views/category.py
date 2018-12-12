@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import  HttpResponse
 from electronic.models import Category,Product
 # Create your views here.
@@ -13,4 +13,10 @@ def listCategory(request):
 def getCategory(request,cat_id):
     data=Category.objects.get(id=cat_id)
     return render(request, 'show.html', {'one_cat': data})
+
+def ondelete(request,cat_id):
+    data = Category.objects.get(id=cat_id)
+    data.delete()
+    return redirect("listing")
+
 
