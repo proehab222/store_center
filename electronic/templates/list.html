@@ -10,6 +10,7 @@
     </style>
 </head>
 <body>
+ <td> <a href="{%url 'elect_ehab:addCat'  %}">Add Cat</a> </td>
 
 <table>
 <tr>
@@ -17,6 +18,7 @@
     <th>Category name</th>
     <th>Category Description</th>
     <th>View</th>
+    <th>View2</th>
     <th>Delete</th>
     <th>Update</th>
 </tr>
@@ -30,6 +32,7 @@
 
        <td>  {{  cat.cat_desc   }}</td>
         <td> <a href="{{cat.id}}">View Cat</a> </td>
+      <td> <a href="{%url 'elect_ehab:getCat' cat.id  %}">View Cat2</a> </td>
         <td> <a href="{{cat.id}}/delete">Delete</a> </td>
          <td> <a href="{{cat.id}}">Update</a> </td>
     </tr>
