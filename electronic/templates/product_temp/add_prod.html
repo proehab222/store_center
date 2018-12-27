@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+add product
+<br>
+<div>
+<form action="{%url 'elect_ehab:addprod'  %}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div>name<input type="Text" name="pro_name"  required ></div>
+     <div>price<input type="Text" name="pro_price" required ></div>
+    <div>photo<input type="File" name="pro_photot" required ></div>
+    Select category
+    <select name="selected_Cat" >
+    {%for cat in allcat%}
+
+
+  <option value='{{cat.id}}'> {{cat.cat_name}} "---" {{cat.id}}</option>
+
+
+    <br>
+    {%endfor%}
+  </select>
+    <div><input type="submit" value="submit"></div>
+</form>
+
+</body>
+</html>

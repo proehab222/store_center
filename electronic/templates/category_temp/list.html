@@ -11,7 +11,8 @@
 </head>
 <body>
  <td> <a href="{%url 'elect_ehab:addCat'  %}">Add Cat</a> </td>
-
+<br>
+ <td> <a href="{%url 'elect_ehab:addprod'  %}">Add Product</a> </td>
 <table>
 <tr>
     <th>ID</th>
@@ -34,7 +35,7 @@
         <td> <a href="{{cat.id}}">View Cat</a> </td>
       <td> <a href="{%url 'elect_ehab:getCat' cat.id  %}">View Cat2</a> </td>
         <td> <a href="{{cat.id}}/delete">Delete</a> </td>
-         <td> <a href="{{cat.id}}">Update</a> </td>
+         <td> <a href="{%url 'elect_ehab:updateCat' cat.id  %}">Update</a> </td>
     </tr>
 
     {% endfor %}
